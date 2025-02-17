@@ -14,8 +14,14 @@ public class Main {
         // 1 crear un metodo estatico que cree un coche y lo devuelva.
         // como es un metodo statico y esta en la misma clase, para llamarlo vasta con esccribir su nombre
 
-        Vehiculo coche2 = crearVehiculo(Combustible.HIBRIDO, 4, 186, false, Color.PLATEADO, ana);
+        Propietario daniel = crearPropietario("Daniel", "Buzea", "", Licencia.B, LocalDate.of(1998,4,8));
+
+
+
+        Vehiculo coche2 = crearVehiculo("5454MJN",Combustible.HIBRIDO, 4, 186, false, Color.PLATEADO, daniel);
         System.out.println(coche2);
+
+
 
 
 
@@ -23,6 +29,7 @@ public class Main {
 
     /**
      *  Metodo que crea un vehciulo pasandole como parametros
+     * @param matricula
      * @param combustible
      * @param ruedas
      * @param potencia
@@ -31,18 +38,24 @@ public class Main {
      * @param propietario
      * @return
      */
-    public static Vehiculo crearVehiculo(Combustible combustible, int ruedas, int potencia, boolean automatico, Color color, Propietario propietario) {
-        Vehiculo vehiculo = new Vehiculo(combustible, ruedas, potencia, automatico, color, propietario);
-
+    public static Vehiculo crearVehiculo(String matricula,Combustible combustible, int ruedas, int potencia, boolean automatico, Color color, Propietario propietario) {
+        Vehiculo vehiculo = new Vehiculo(matricula, combustible, ruedas, potencia, automatico, color, propietario);
         return vehiculo;
-
     }
 
+    /**
+     *
+     * @param nombre
+     * @param apellido1
+     * @param apellido2
+     * @param licencia
+     * @param fechadenacimiento
+     * @return
+     */
+    public static Propietario crearPropietario(String nombre, String apellido1, String apellido2, Licencia licencia, LocalDate fechadenacimiento) {
+        Propietario propietario = new Propietario(nombre, apellido1, apellido2, licencia, fechadenacimiento);
 
-    public static Propietario creaPropietario(String nombre, String apellido1, String apellido2, Licencia licencia, LocalDate fechadenacimiento) {
-       Propietario propietario = new Propietario()
-
-
+        return propietario;
     }
 
 }
