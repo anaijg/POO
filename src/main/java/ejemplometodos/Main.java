@@ -7,13 +7,13 @@ public class Main {
         //creo un objeto de propietario
         Propietario pablo = new Propietario("Pablo", "Carrillo", "Punina", Licencia.B, LocalDate.of(1990, 03, 24));
         //creamos un coche
-        Vehiculo coche1 = new Vehiculo("2345-455", Combustible.DIESEL, 4, 130, false, Color.NEGRO, pablo);
+        Vehiculo coche1 = new Vehiculo("5454-BXZ", Combustible.DIESEL, 4, 130, false, Color.NEGRO, pablo);
         System.out.println(coche1);
 
         // pero para eso debemos:
         //1) crear un método estatico que cree un coche, pasandole los parametros y lo devuelva.
         //como es un metodo estatico y está en esta misma clase, para llamarlo basta con escribir su nombre
-        Vehiculo coche2 = crearVehiculo("ooj.645", Combustible.DIESEL, 4, 120, true, Color.ROJO, pablo);
+        Vehiculo coche2 = crearVehiculo("1234-CCC", Combustible.DIESEL, 4, 120, true, Color.ROJO, pablo);
         System.out.println(coche2);
 
         //2) Crear un método estático que cree un propietario, pasándole los parametros

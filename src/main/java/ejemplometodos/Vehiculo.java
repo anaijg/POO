@@ -40,10 +40,20 @@ public class Vehiculo {
                 '}';
     }
 
-    // metodos de instancia no lleva  la palabra static y solo pueden ser llamdos mediante una
+    // metodos de instancia no lleva  la palabra static y solo pueden ser llamdos mediante un objeto de la clase en que se declara
 
     /**
-     * Método
+     * Método transferirPropiedad, cambia el propietario antiguo por el nuevo
+     * @param nuevoPropietario
+     */
+
+    /**
+     * esDeAltaPotenica
+     * @return true si la potencia es superior a 200
+     */
+
+    /**
+     * cambia color: sustituye el color antiguo por el nuevo
      */
 
     /**
@@ -54,6 +64,9 @@ public class Vehiculo {
 
     /**
      * comprobarMatricula
+     * comprueba si la matricula tiene estructura: NNNN-LLL (N es numero, L es letra)
+     * utiliza el metodo Character.isDigit() y Character.isLetter()
+     * @return true si el formato de la matricula es correcto
      *
      */
 }

@@ -6,6 +6,7 @@ public class FlotaVehiculos {
     // en el constructor inicializas el arraylist
 
     //toStrign
+
     //añadir métodos de instancia para añadir un vehiculo a la flota
 
     //añadir método de instancia para eliminar un vehiculo de la flota
