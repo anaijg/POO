@@ -3,19 +3,19 @@ package primerejemplo;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Paciente{
-
-    //lso atributos se declaran normalmente com privare (eso es encapsularlos)
-    // private = solo se puede acceder desde la misma clase
+public class Paciente {
+    // los atributos se declaran normalmente como private (eso es encapsularlos)
+    // private = sólo se puede acceder desde la misma clase
     private int idPaciente;
     private String nombre;
-    private String apellido2;
     private String apellido1;
-    // Fechas de nacimiento -> fechas LocalDate
+    private String apellido2;
+    // Fecha de nacimiento -> fechas LocalDate
     private LocalDate fechaNacimiento;
     private ArrayList<String> sintomas;
 
-    // para acceder (o leer o cambiar) lso atributos private, lo que se hace es crear unos métodos públicos que se llaman get y set
+
+    // para acceder (o leer o cambiar) los atributos private lo que se hace es crear unos métodos públicos que se llaman get y set
 
 
     public int getIdPaciente() {
@@ -34,20 +34,20 @@ public class Paciente{
         this.nombre = nombre;
     }
 
-    public String getApellido2() {
-        return apellido2;
-    }
-
-    public void setApellido2(String apellido2) {
-        this.apellido2 = apellido2;
-    }
-
     public String getApellido1() {
         return apellido1;
     }
 
     public void setApellido1(String apellido1) {
         this.apellido1 = apellido1;
+    }
+
+    public String getApellido2() {
+        return apellido2;
+    }
+
+    public void setApellido2(String apellido2) {
+        this.apellido2 = apellido2;
     }
 
     public LocalDate getFechaNacimiento() {
@@ -71,13 +71,10 @@ public class Paciente{
         return "Paciente{" +
                 "idPaciente=" + idPaciente +
                 ", nombre='" + nombre + '\'' +
-                ", apellido2='" + apellido2 + '\'' +
                 ", apellido1='" + apellido1 + '\'' +
+                ", apellido2='" + apellido2 + '\'' +
                 ", fechaNacimiento=" + fechaNacimiento +
                 ", sintomas=" + sintomas +
                 '}';
     }
 }
-
-
-
