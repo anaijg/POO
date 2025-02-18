@@ -1,4 +1,4 @@
-package ejemploMetodosDaniel;
+package ejemplometodosdaniel;
 
 public enum Combustible {
     DIESEL,

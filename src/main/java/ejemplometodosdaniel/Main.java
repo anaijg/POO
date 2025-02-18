@@ -1,4 +1,4 @@
-package ejemploMetodosDaniel;
+package ejemplometodosdaniel;
 
 import java.time.LocalDate;
 
@@ -27,6 +27,18 @@ public class Main {
             System.out.println("coche2 es de alta potencia ");
         }
 
+        // cambiamos el color del coche2
+
+        System.out.println("\n\nCambiamos el color del coche");
+        coche2.cambiarColor(Color.AMARILLO);
+        System.out.println(coche2);
+
+        /**
+         * EsElectrico
+         */
+        System.out.println("\n\nComprobamos si el vehiculo es electrico");
+        System.out.println("coche 1 es electrico "+ coche1.esElectrico());
+        System.out.println("coche 2 es electrico "+ coche2.esElectrico());
 
 
 
@@ -79,7 +91,5 @@ public class Main {
 
 
         // probamos el metodo de transferir propiedad
-
-
 
 }

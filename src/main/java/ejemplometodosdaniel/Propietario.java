@@ -1,4 +1,4 @@
-package ejemploMetodosDaniel;
+package ejemplometodosdaniel;
 
 import java.time.LocalDate;
 

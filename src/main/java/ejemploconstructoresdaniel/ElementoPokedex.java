@@ -1,4 +1,4 @@
-package ejemploConstructores;
+package ejemploconstructoresdaniel;
 
 public class ElementoPokedex {
     private int numero;

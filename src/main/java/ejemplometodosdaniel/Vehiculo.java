@@ -1,4 +1,4 @@
-package ejemploMetodosDaniel;
+package ejemplometodosdaniel;
 
 public class Vehiculo {
     private String matricula;
@@ -49,6 +49,37 @@ public class Vehiculo {
         return  potencia > 140;
     }
 
+    /**
+     * metodo para cambiar color
+     */
+        public void cambiarColor(Color nuevoColor) {
+            this.color = nuevoColor;
+            System.out.println("El nuevo color del coche con matricula " + matricula + " es " + nuevoColor);
+        }
+    /**
+     *esElectrico
+     */
+
+    public boolean esElectrico() {
+        return combustible.equals(Combustible.ELECTRICO);
+    }
+
+    public boolean comprobarMatricula() {
+        // recorremos la matricula caracter a caracter
+        boolean matriculOk = true;
+        for (int i = 0; i < matricula.length(); i++) {
+            if (i == 0 || i == 1 || i == 2 || i == 3) { // tienen que ser letras
+                if (!Character.isLetter(matricula.charAt(i)))  { // si alguno de los 4 primeros cacarteres no es una letra la matricula esta mal
+                    matriculOk = false;
+                    break;
+                }
+            }
+
+        }
+
+
+        return false;
+    }
 
 
 
