@@ -19,6 +19,8 @@ public class Propietario {
         this.fechaNacimiento = fechaNacimiento;
     }
 
+
+
     @Override
     public String toString() {
         return "Propietario{" +
@@ -28,5 +30,14 @@ public class Propietario {
                 ", licencia=" + licencia +
                 ", fechaNacimiento=" + fechaNacimiento +
                 '}';
+    }
+
+    /**
+     * Devuelve nombre completo del propietario
+     *
+     */
+
+    public String getNombreCompleto(){
+        return nombre + " apellido1" + " " + "apellido2";
     }
 }
