@@ -1,4 +1,4 @@
-package ejemplometodos;
+package ejemploMetodosDaniel;
 
 public enum Color {
     ROJO,

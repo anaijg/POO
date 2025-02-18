@@ -1,4 +1,4 @@
-package ejemplometodos;
+package ejemploMetodosDaniel;
 
 import java.time.LocalDate;
 
@@ -26,6 +26,19 @@ public class Main {
         if (coche2.esDeAltaPotencia()) {
             System.out.println("coche2 es de alta potencia ");
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
