@@ -7,6 +7,6 @@ public enum Combustible {
     GLP,
     ELECTRICO,
     HUMANA,
-    ANIMAL,
+
 
 }

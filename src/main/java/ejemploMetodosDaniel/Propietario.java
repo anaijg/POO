@@ -28,4 +28,14 @@ public class Propietario {
                 ", fechadenacimiento=" + fechadenacimiento +
                 '}';
     }
+    /**Metodo getNombreCompleto()
+     * @return  una cadena con el nombre y los apellidos
+     *
+     */
+
+    public String getNombreCompleto() {
+        return nombre + " " + apellido1 + " " + apellido2;
+    }
+
+
 }

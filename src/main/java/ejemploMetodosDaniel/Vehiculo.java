@@ -31,4 +31,25 @@ public class Vehiculo {
                 ", propietario=" + propietario +
                 '}';
     }
+
+    /*
+    metodo transferirPropiedad, cambia el propietario
+     */
+
+    public void transferirPropiedad(Propietario nuevoPropietario) {
+        this.propietario = nuevoPropietario;
+        System.out.println("Ahora el nuevo propietario es " + nuevoPropietario.getNombreCompleto());
+
+    }
+    /**
+     * EsDeAltaPotencia
+     * @return true si la potencia es superior a 200
+     */
+    public boolean esDeAltaPotencia() {
+        return  potencia > 140;
+    }
+
+
+
+
 }
