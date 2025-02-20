@@ -1,14 +1,12 @@
 package ejemplometodosdaniel;
 
-import ejemplometodos.Licencia;
-
 import java.time.LocalDate;
 
 public class Propietario {
     private String nombre;
     private String apellido1;
     private String apellido2;
-    private ejemplometodos.Licencia licencia;
+    private Licencia licencia;
     private LocalDate fechaNacimiento;
 
     public Propietario(String nombre, String apellido1, String apellido2, Licencia licencia, LocalDate fechaNacimiento) {

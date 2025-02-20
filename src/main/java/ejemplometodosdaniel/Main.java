@@ -1,28 +1,23 @@
 package ejemplometodosdaniel;
 
-import ejemplometodos.Color;
-import ejemplometodos.Combustible;
-import ejemplometodos.Licencia;
-import ejemplometodos.Propietario;
-import ejemplometodos.Vehiculo;
 
 import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
         // creamos un propietario
-        ejemplometodos.Propietario ana = new ejemplometodos.Propietario("Ana", "Álvarez", "Ares", ejemplometodos.Licencia.B, LocalDate.of(1978, 10, 10));
+        Propietario ana = new Propietario("Ana", "Álvarez", "Ares", Licencia.B, LocalDate.of(1978, 10, 10));
 
         // creamos un coche
         System.out.println("Datos de coche1:");
-        ejemplometodos.Vehiculo coche1 = new ejemplometodos.Vehiculo("5454-BXZ" , ejemplometodos.Combustible.HIBRIDO, 4, 136, true, ejemplometodos.Color.AZUL, ana);
+        Vehiculo coche1 = new Vehiculo("5454-BXZ" , Combustible.HIBRIDO, 4, 136, true, Color.AZUL, ana);
         System.out.println(coche1);
 
 
         // 1) Crear un método estático que cree un coche, pasándole los parámetros y lo devuelva.
         // como es un método estático y está en esta misma clase, para llamarlo basta con escribir su nombre
         System.out.println("\n\nDatos de coche2: ");
-        ejemplometodos.Vehiculo coche2 = crearVehiculo("1234-CCC", ejemplometodos.Combustible.ELECTRICO, 4, 150, true, ejemplometodos.Color.ROJO, ana);
+        Vehiculo coche2 = crearVehiculo("1234-CCC", Combustible.ELECTRICO, 4, 150, true, Color.ROJO, ana);
         System.out.println(coche2);
 
         // 2) Crear un método estático que cree un propietario, pasándole los parámetros necesarios, y lo devuelva. Este nuevo propietario nos servirá para crear el siguiente coche.
@@ -33,7 +28,7 @@ public class Main {
         // 4) Añade los tres vehículos a esta flota
 
         // 5) Crea un nuevo propietario
-        ejemplometodos.Propietario luci = new ejemplometodos.Propietario("Lucifer", "Fernández", "Flórez", Licencia.B, LocalDate.of(1549, 8, 24));
+        Propietario luci = new Propietario("Lucifer", "Fernández", "Flórez", Licencia.B, LocalDate.of(1549, 8, 24));
         System.out.println("\n\nDatos del propietario luci: ");
         System.out.println(luci);
         // 6) Cambia el propietario de alguno de los coches de la flota.
@@ -56,7 +51,7 @@ public class Main {
 
         // 9) Cambiamos el color del coche 2
         System.out.println("\n\nCambiamos el color del coche2");
-        coche2.cambiarColor(ejemplometodos.Color.PLATEADO);
+        coche2.cambiarColor(Color.PLATEADO);
 
         // 10) Probamos el método esElectrico()
         System.out.println("\n\nProbamos esElectrico(): ");
@@ -75,7 +70,7 @@ public class Main {
      * @param propietario
      * @return el vehículo creado
      */
-    public static ejemplometodos.Vehiculo crearVehiculo(String matricula, Combustible combustible, int ruedas, int potencia, boolean automatico, Color color, Propietario propietario) {
+    public static Vehiculo crearVehiculo(String matricula, Combustible combustible, int ruedas, int potencia, boolean automatico, Color color, Propietario propietario) {
         return new Vehiculo(matricula, combustible, ruedas, potencia, automatico, color, propietario);
     }
 

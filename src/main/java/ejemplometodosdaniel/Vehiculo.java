@@ -1,19 +1,17 @@
 package ejemplometodosdaniel;
 
-import ejemplometodos.Color;
-import ejemplometodos.Combustible;
-import ejemplometodos.Propietario;
+
 
 public class Vehiculo {
     private String matricula;
-    private ejemplometodos.Combustible combustible;
+    private Combustible combustible;
     private int ruedas;
     private int potencia;
     private boolean automatico;
-    private ejemplometodos.Color color;
-    private ejemplometodos.Propietario propietario;
+    private Color color;
+    private Propietario propietario;
 
-    public Vehiculo(String matricula, ejemplometodos.Combustible combustible, int ruedas, int potencia, boolean automatico, ejemplometodos.Color color, ejemplometodos.Propietario propietario) {
+    public Vehiculo(String matricula, Combustible combustible, int ruedas, int potencia, boolean automatico, Color color, Propietario propietario) {
         this.matricula = matricula;
         this.combustible = combustible;
         this.ruedas = ruedas;
