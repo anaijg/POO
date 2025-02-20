@@ -1,12 +1,5 @@
 package ejemplometodosdaniel;
 
 public enum Color {
-    ROJO,
-    NEGRO,
-    BLANCO,
-    AZUL,
-    AMARILLO,
-    PLATEADO,
-    VERDE;
-
+    NEGRO, BLANCO, AZUL, VERDE, ROJO, PLATEADO, AMARILLO
 }

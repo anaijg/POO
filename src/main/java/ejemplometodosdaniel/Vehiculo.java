@@ -1,15 +1,19 @@
 package ejemplometodosdaniel;
 
+import ejemplometodos.Color;
+import ejemplometodos.Combustible;
+import ejemplometodos.Propietario;
+
 public class Vehiculo {
     private String matricula;
-    private Combustible combustible;
+    private ejemplometodos.Combustible combustible;
     private int ruedas;
     private int potencia;
     private boolean automatico;
-    private Color color;
-    private Propietario propietario;
+    private ejemplometodos.Color color;
+    private ejemplometodos.Propietario propietario;
 
-    public Vehiculo(String matricula, Combustible combustible, int ruedas, int potencia, boolean automatico, Color color, Propietario propietario) {
+    public Vehiculo(String matricula, ejemplometodos.Combustible combustible, int ruedas, int potencia, boolean automatico, ejemplometodos.Color color, ejemplometodos.Propietario propietario) {
         this.matricula = matricula;
         this.combustible = combustible;
         this.ruedas = ruedas;
@@ -32,50 +36,63 @@ public class Vehiculo {
                 '}';
     }
 
-    /*
-    metodo transferirPropiedad, cambia el propietario
-     */
+    // métodos de instancia: no llevan la palabra static y sólo pueden ser llamados mediante un objeto de la clase en que se declaran
 
+    /**
+     * Método transferirPropiedad, cambia el propietario antiguo por el nuevo
+     * @param nuevoPropietario
+     */
     public void transferirPropiedad(Propietario nuevoPropietario) {
         this.propietario = nuevoPropietario;
-        System.out.println("Ahora el nuevo propietario es " + nuevoPropietario.getNombreCompleto());
-
+        System.out.println("Ahora el nuevo propietario del coche con matrícula " + matricula + " es " + nuevoPropietario.getNombreCompleto());
     }
+
     /**
-     * EsDeAltaPotencia
-     * @return true si la potencia es superior a 200
+     * esDeAltaPotencia
+     * @return true si la potencia es superior a 140
      */
     public boolean esDeAltaPotencia() {
-        return  potencia > 140;
+        return potencia > 140;
     }
 
     /**
-     * metodo para cambiar color
+     * cambiarColor: sustituye el color antiguo por el nuevo
+     * @param nuevoColor
      */
-        public void cambiarColor(Color nuevoColor) {
-            this.color = nuevoColor;
-            System.out.println("El nuevo color del coche con matricula " + matricula + " es " + nuevoColor);
-        }
-    /**
-     *esElectrico
-     */
+    public void cambiarColor(Color nuevoColor) {
+        this.color = nuevoColor;
+        System.out.println("El nuevo color del coche con matrícula " + matricula + " es " + nuevoColor);
+    }
 
+    /**
+     * esElectrico()
+     * @return true si el coche es eléctrico
+     */
     public boolean esElectrico() {
-        return combustible.equals(Combustible.ELECTRICO);
+        return this.combustible.equals(Combustible.ELECTRICO);
     }
 
+    /**
+     * comprobarMatricula()
+     * comprueba si la matrícula tiene esta esctructura: NNNN-LLL (N es número, L es letra)
+     * utiliza el método Character.isDigit() y Character.isLetter() ¡¡¡new!!!
+     * @return true si el formato de la matrícula es correcto
+     */
     public boolean comprobarMatricula() {
-        // recorremos la matricula caracter a caracter
-        boolean matriculOk = true;
+        // recorremos la matrícula carácter a carácter
+        // a partir de ahora en vez de char (tipo primitivo) vamos a utilizar Character
+        // como los índices son importantes, utilizamos for en vez de foreach
+        boolean matriculaOK = true;
         for (int i = 0; i < matricula.length(); i++) {
             if (i == 0 || i == 1 || i == 2 || i == 3) { // tienen que ser letras
-                if (!Character.isLetter(matricula.charAt(i)))  { // si alguno de los 4 primeros cacarteres no es una letra la matricula esta mal
-                    matriculOk = false;
+                if (!Character.isLetter(matricula.charAt(i))) { // si alguno de los primeros cuatro caracteres no es una letra, es que la matrícula está mal, y no hace falta seguir mirando más (por eso el break)
+                    matriculaOK = false;
                     break;
                 }
             }
-
         }
+
+
 
 
         return false;
