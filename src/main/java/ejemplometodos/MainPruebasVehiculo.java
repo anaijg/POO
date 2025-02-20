@@ -2,7 +2,7 @@ package ejemplometodos;
 
 import java.time.LocalDate;
 
-public class Main {
+public class MainPruebasVehiculo {
     public static void main(String[] args) {
         // creamos un propietario
         Propietario ana = new Propietario("Ana", "Álvarez", "Ares", Licencia.B, LocalDate.of(1978, 10, 10));
