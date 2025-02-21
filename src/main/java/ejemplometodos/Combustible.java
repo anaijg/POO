@@ -1,6 +1,6 @@
 package ejemplometodos;
 
-public enum combustible {
+public enum Combustible {
     DIESEL,
     GASOLINA,
     HIBRIDO,
