@@ -89,13 +89,21 @@ public class Vehiculo {
                 }
             }
         }
-
-
-
-
         return false;
     }
 
 
 
-}
+        public String getMatricula() {
+            return matricula;
+        }
+
+
+
+
+
+
+
+
+    }
+
