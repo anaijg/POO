@@ -20,10 +20,6 @@ public class Cuenta {
                 '}';
     }
 
-    public static mostrarCuenta(String codigo, double balance, Usuario propietario){
-        System.out.println(Cuenta);
-    }
-
     public String getCodigo() {
         return codigo;
     }
