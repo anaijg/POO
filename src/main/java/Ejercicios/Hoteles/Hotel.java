@@ -13,46 +13,48 @@ public class Hotel {
 
     //constructor
 
+    public Hotel(int idHotel, Zona zona) {
+        this.idHotel = idHotel;
+        this.zona = zona;
+        this.precio = (40.0 + 500.0) / 2.0;
+    }
+
     public Hotel(int idHotel, Zona zona, double precio) {
         this.idHotel = idHotel;
         this.zona = zona;
-        this.precio = precio;
-    }
-
-    //setter y getter
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
-    public int getIdHotel() {
-        return idHotel;
-    }
-
-    public void setIdHotel(int idHotel) {
-        this.idHotel = idHotel;
-    }
-
-    public Zona getZona() {
-        return zona;
-    }
-
-    public void setZona(Zona zona) {
-        this.zona = zona;
+        if (precio >= 40 && precio <= 500) {
+            this.precio = precio;
+        } else {
+            this.precio = 270;
+        }
     }
 
 
     @Override
     public String toString() {
-        return "Hotel{" +
-                "idHotel=" + idHotel +
-                ", zona=" + zona +
-                ", precio=" + precio +
-                '}';
+        String caracteristicasObjetoHotel = "ID del Hotel: " + idHotel + "\n Zona en la que esta: ";
+
+        switch (this.zona) {
+            case Playa -> caracteristicasObjetoHotel += "En la playa";
+            case Rural -> caracteristicasObjetoHotel += "En el campo";
+            case Montania -> caracteristicasObjetoHotel += "En la montaña";
+        }
+
+        caracteristicasObjetoHotel += "\nPrecio por noche: " + this.precio ;
+
+
+        return caracteristicasObjetoHotel;
+    }
+
+    //actualizacion precio hotel (actualizar = setter o metodo setPrecio)
+
+    public void setPrecio (double precio) {
+        if (precio >= 40 && precio <= 500) {
+            this.precio = precio;
+            System.out.println("El nuevo precio de la habitacion es: " + this.precio + "€");
+        } else {
+            System.out.println("El precio introducido no es valido");
+        }
     }
 
 

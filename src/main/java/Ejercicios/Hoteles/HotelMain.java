@@ -7,23 +7,26 @@ public class HotelMain {
     public static void main(String[] args) {
 
 
-
-    Hotel hotel_Royal = new Hotel(1, Zona.Playa, 21 );
+        // no le pasamos precio para probar el que viene de base
+    Hotel hotel_Royal = new Hotel(1, Zona.Playa );
 
         System.out.println(hotel_Royal);
 
 
+            Hotel hotel2 = new Hotel(2, Zona.Montania, 44.8);
+        System.out.println("\n" + hotel2);
 
+
+        hotel_Royal.setPrecio(200);
+        System.out.println("\n\n" + hotel_Royal);
+        System.out.println();
+        hotel_Royal.setPrecio(1000);
+        System.out.println(hotel_Royal);
+        System.out.println();
     }
 
-    public double cambioPrecio (double nuevoPrecio ) {
-        System.out.println("Introduce el precio del Hotel entre 40€ y 500€");
-        nuevoPrecio = sc.nextDouble();
-        if (!(nuevoPrecio > 39 && nuevoPrecio < 501)) {
-            nuevoPrecio = 270;
-        }
-        return nuevoPrecio;
-    }
+
+
 
 
 }

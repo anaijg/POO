@@ -5,6 +5,13 @@ public class Cuenta {
     private double Balance;
     public Usuario propietario;
 
+    /**
+     *
+     * @param codigo
+     * @param balance
+     * @param propietario
+     */
+
     public Cuenta(String codigo, double balance, Usuario propietario) {
         this.codigo = codigo;
         Balance = balance;

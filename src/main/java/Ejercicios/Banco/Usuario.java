@@ -5,6 +5,13 @@ public class Usuario {
     private String Nombre;
     private String Apellidos;
 
+    /**
+     *
+     * @param login
+     * @param nombre
+     * @param apellidos
+     */
+
     public Usuario(String login, String nombre, String apellidos) {
         Login = login;
         Nombre = nombre;
