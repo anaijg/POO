@@ -10,5 +10,8 @@ public class MainPruebaCC {
         cc1.mostrarInformacion();
         cc1.sacarDinero(1250);
         cc1.mostrarInformacion();
+        // TODO crear dos objetos, uno con cada uno de los constructores del punto (sobrecarga...)
+        
+
     }
 }

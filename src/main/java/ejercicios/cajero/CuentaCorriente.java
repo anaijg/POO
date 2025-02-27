@@ -15,10 +15,10 @@ public class CuentaCorriente {
     }
 
     // Sobrecarga los constructores para poder crear objetos:
-    //Con el DNI del titular de la cuenta y un saldo inicial.
+    //Con el DNI del titular de la cuenta y un saldo inicial. Como no tenemos titular, le asignaremos el valor "Anónimo"
+
 
     //Con el DNI, nombre y el saldo inicial.
-
 
 
 
