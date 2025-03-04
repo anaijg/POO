@@ -28,10 +28,59 @@ package ejerciciosdaniel.cajero;
  * Modificar la clase CuentaCorriente para que pueda disponer de un objeto Gestor. Escribir los métodos necesarios para consultar qué gestor tiene una cuenta corriente y también para poder cambiarlo..
  */
 public class CuentaCorriente {
-    private String DNI;
-    private String nombre;
+    String DNI;
+    public String titular;
     private double saldo;
 
+    /**
+     *
+     * @param DNI
+     * @param titular
+     */
+    public CuentaCorriente(String DNI, String titular) {
+        this.DNI = DNI;
+        this.titular = titular;
+        this.saldo = 0;
+    }
+
+    /**
+     *
+     * @param DNI
+     * @param saldo
+     */
+    public CuentaCorriente(String DNI, double saldo) {
+        this.DNI = DNI;
+        this.saldo = saldo;
+    }
+
+    /**
+     *
+     * @param DNI
+     * @param titular
+     * @param saldo
+     */
+    public CuentaCorriente(String DNI, String titular, double saldo) {
+        this.DNI = DNI;
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+
+    public void sacarDinero(double reintegro) {
+        if (saldo >= reintegro) {
+            this.saldo -= reintegro;
+        }else {
+            System.out.println("Saldo insuficiente. ");
+        }
+    }
+
+    public void ingresarDinero(double ingreso) {
+        this.saldo += ingreso;
+    }
+
+
+    public void mostrarInformacion() {
+        System.out.println(this.DNI + " - " + this.titular + " - saldo =" + this.saldo + "€");
+    }
 
 
 }

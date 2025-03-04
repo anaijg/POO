@@ -21,17 +21,11 @@ public class Usuario {
     private String nombre;
     private String apellidos;
 
-    //constructor
-
-
     public Usuario(String login, String nombre, String apellidos) {
         this.login = login;
         this.nombre = nombre;
         this.apellidos = apellidos;
     }
-
-    //get y set de todos los atributos
-
 
     public String getLogin() {
         return login;
@@ -57,9 +51,6 @@ public class Usuario {
         this.apellidos = apellidos;
     }
 
-    //to string
-
-
     @Override
     public String toString() {
         return "Usuario{" +
@@ -68,4 +59,8 @@ public class Usuario {
                 ", apellidos='" + apellidos + '\'' +
                 '}';
     }
+
+
+
+
 }

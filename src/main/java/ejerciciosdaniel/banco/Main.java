@@ -1,7 +1,7 @@
 package ejerciciosdaniel.banco;
 
 /**
- *Crea un paquete banco y dentro de él:
+ * Crea un paquete banco y dentro de él:
  * Crea una clase Cuenta, con tres atributos:
  *                                                i. 	código, de tipo String
  *                                               ii. 	balance, de tipo double
@@ -19,28 +19,21 @@ package ejerciciosdaniel.banco;
 public class Main {
     public static void main(String[] args) {
 
-        //instancia propietario
 
-        Usuario propietario = new Usuario("demo", "Ale", "Chim pom");
+        Usuario propietario = new Usuario("demo", "Ale", "CHIm Pom");
 
-        //instancia cuenta
+        Cuenta cuenta1 = new Cuenta("123456", 1000, propietario);
 
-        Cuenta cuentaBancaria = new Cuenta("123456", 1000, propietario);
+        mostrarCuenta(cuenta1);
 
-        mostarCuenta(cuentaBancaria);
 
 
 
     }
 
-    public static void mostarCuenta(Cuenta cuenta) {
-        System.out.println("Cuenta{" +
-                "codigo='" + cuenta.getCodigo() + '\'' +
-                ", balance=" + cuenta.getBalance() +
-                ", propietario=" + cuenta.getPropietario() +
-                '}');
+
+
+    public static void mostrarCuenta(Cuenta cuenta){
+        System.out.println(cuenta);
     }
-
-
-
 }

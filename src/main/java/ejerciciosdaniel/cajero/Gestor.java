@@ -27,26 +27,5 @@ package ejerciciosdaniel.cajero;
  * El nombre será público y el importe máximo sólo será visible por clases que estén en el mismo paquete.
  * Modificar la clase CuentaCorriente para que pueda disponer de un objeto Gestor. Escribir los métodos necesarios para consultar qué gestor tiene una cuenta corriente y también para poder cambiarlo..
  */
-public class Main {
-    public static void main(String[] args) {
-        CuentaCorriente cc1 = new CuentaCorriente("00000001X", "Perico palotes");
-
-        cc1.mostrarInformacion();
-        cc1.ingresarDinero(5000);
-        cc1.mostrarInformacion();
-        cc1.sacarDinero(10000);
-        cc1.mostrarInformacion();
-        cc1.sacarDinero(1250);
-        cc1.mostrarInformacion();
-
-        System.out.println();
-
-        CuentaCorriente cc2 = new CuentaCorriente("11111111X",5000);
-        cc2.mostrarInformacion();
-        System.out.println();
-
-
-        CuentaCorriente cc3 = new CuentaCorriente("22222222X", "Daniel", 10000);
-        cc3.mostrarInformacion();
-    }
+public class Gestor {
 }

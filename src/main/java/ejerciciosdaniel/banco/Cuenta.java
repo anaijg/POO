@@ -17,21 +17,15 @@ package ejerciciosdaniel.banco;
  *                                               ii. 	Un método estático mostrarCuenta, que recibe una cuenta y muestra toda la información de la cuenta.
  */
 public class Cuenta {
-    private String codigo;
+    private String  codigo;
     private double balance;
     private Usuario propietario;
-
-
-    //constructor
-
 
     public Cuenta(String codigo, double balance, Usuario propietario) {
         this.codigo = codigo;
         this.balance = balance;
         this.propietario = propietario;
     }
-
-    //get y set de todos los atributos
 
 
     public String getCodigo() {
@@ -58,8 +52,6 @@ public class Cuenta {
         this.propietario = propietario;
     }
 
-    //to string
-
 
     @Override
     public String toString() {
@@ -69,4 +61,8 @@ public class Cuenta {
                 ", propietario=" + propietario +
                 '}';
     }
+
+
+
+
 }
