@@ -14,7 +14,7 @@ public class Robot {
         this.modelo = "Desconocido";
     }
 
-    //Un constructor con (tres) parámetros que, recibe valores e inicializa cada uno de los tres atributos de los objetos que se crean.
+    //Un constructor con (tres) parámetros que, recibe valores por parámetro e inicializa cada uno de los tres atributos de los objetos que se crean.
 
     public Robot(String nombre, String modelo, int duracion) {
         this.nombre = nombre;
@@ -40,6 +40,7 @@ public class Robot {
     }
 }
 
+// Crea en el mismo fichero una clase Main en la cual creamos tres robots, uno con cada constructor, y mostramos sus propiedades.
 class Main {
     public static void main(String[] args) {
         Robot robot1 = new Robot();
