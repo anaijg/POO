@@ -1,4 +1,4 @@
-package ejercicios.usuario;
+package ejerciciosAna.usuario;
 
 import java.util.Scanner;
 

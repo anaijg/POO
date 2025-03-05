@@ -1,4 +1,4 @@
-package ejercicios.hotel;
+package ejerciciosAna.hotel;
 
 public enum Zona {
     PLAYA,

@@ -1,4 +1,4 @@
-package ejercicios.cajero;
+package ejerciciosAna.cajero;
 
 public class Gestor {
 }

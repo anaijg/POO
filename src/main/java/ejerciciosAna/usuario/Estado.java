@@ -1,4 +1,4 @@
-package ejercicios.usuario;
+package ejerciciosAna.usuario;
 
 public enum Estado {
     PENDIENTE,

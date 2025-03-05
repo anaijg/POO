@@ -1,4 +1,4 @@
-package ejercicios.usuario;
+package ejerciciosAna.usuario;
 
 /**
  * La clase Usuario debe contener:

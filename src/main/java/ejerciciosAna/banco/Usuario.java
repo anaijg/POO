@@ -1,4 +1,4 @@
-package ejercicios.banco;
+package ejerciciosAna.banco;
 
 /**
  * constructores parametrizados,  los getters y setters correspondientes a cada atributo y un método toString().

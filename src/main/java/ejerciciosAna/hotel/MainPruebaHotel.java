@@ -1,4 +1,4 @@
-package ejercicios.hotel;
+package ejerciciosAna.hotel;
 
 /**
  * en esta clase vamos a probar los métodos que hay en la clase Hotel

@@ -1,4 +1,4 @@
-package ejercicios.cajero;
+package ejerciciosAna.cajero;
 
 public class CuentaCorriente {
     // que almacena los datos: DNI, nombre del titular y saldo.

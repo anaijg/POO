@@ -1,4 +1,4 @@
-package ejercicios.banco;
+package ejerciciosAna.banco;
 
 public class Main {
     public static void main(String[] args) {
