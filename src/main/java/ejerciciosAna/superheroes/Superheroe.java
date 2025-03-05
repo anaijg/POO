@@ -1,4 +1,4 @@
-package ejercicios.superheroes;
+package ejerciciosAna.superheroes;
 
 /**
  * Esta clase definirá las características de un superhéroe.

@@ -1,4 +1,4 @@
-package ejercicios.superheroes;
+package ejerciciosAna.superheroes;
 
 /**
  * Define un grupo de medidas de un objeto

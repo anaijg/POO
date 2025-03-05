@@ -1,4 +1,4 @@
-package ejercicios.superheroes;
+package ejerciciosAna.superheroes;
 
 /**
  * Clase Figura

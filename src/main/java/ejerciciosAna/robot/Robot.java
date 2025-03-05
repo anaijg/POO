@@ -1,4 +1,4 @@
-package ejercicios.robot;
+package ejerciciosAna.robot;
 
 public class Robot {
     // Crea una clase Robot con dos atributos de tipo String: nombre y modelo, y un atributo int duración.
