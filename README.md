@@ -23,7 +23,7 @@ git branch
 ````
 La rama activa estará marcada con un asterisco *.
 
-**4. A partir de aquí, para subir los ejercicios trabajas desde tu rama en local haciendo push hacia tu rama en remoto.**
+**4. A partir de aquí, para subir los ejerciciosAna trabajas desde tu rama en local haciendo push hacia tu rama en remoto.**
 A partir de aquí, trabaja siempre en tu rama. Cuando finalices, confirma los cambios y añádelos a tu rama en el repositorio remoto con `git push`.
 
 Si no funciona simplemente con `git push` haces esto.
@@ -32,7 +32,7 @@ git push upstream origin <nombre-de-tu-rama>
 ````
 Con eso ya añades tu rama al repositorio  (si eres colaborador del repositorio)
 
-**5. Cuando trabajes en tu rama, renombra los ejercicios antes de subirlos para incluir tu nombre.**
+**5. Cuando trabajes en tu rama, renombra los ejerciciosAna antes de subirlos para incluir tu nombre.**
 Por ejemplo:
 
 Ejercicio1.java → Ejercicio1_Juan.java  
@@ -45,7 +45,7 @@ git add .
 ````
 Haz un commit con un mensaje descriptivo:
 ````bash
-git commit -m "Renombrados los archivos de los ejercicios con mi nombre"
+git commit -m "Renombrados los archivos de los ejerciciosAna con mi nombre"
 ````
 >Recuerda de vez en cuando cambiar a la la rama master y hacer un pull.
 
