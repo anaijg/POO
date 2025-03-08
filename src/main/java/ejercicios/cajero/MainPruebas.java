@@ -12,5 +12,10 @@ public class MainPruebas {
         cuentaCorriente.mostrarInformacion();
         cuentaCorriente.sacarDinero(1250);
         cuentaCorriente.mostrarInformacion();
+
+        // TODO crear dos objetos, uno con cada uno de los constructores del punto( sobrecargas...
+        
+
+
     }
 }

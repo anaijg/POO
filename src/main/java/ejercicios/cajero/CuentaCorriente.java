@@ -15,14 +15,27 @@ public class CuentaCorriente {
     }
 
     //sobrecarga los cosntructores para poder crear objetos.
-    // con el dni del titular de la cuenta y un saldo inicial
+    // con el dni del titular de la cuenta y un saldo inicial. Como no tenemos titular, le asignaremos el valor "Anonimo".
+    public CuentaCorriente(String DNI, double saldo) {
+        this.DNI = DNI;
+        this.saldo = saldo;
+        this.titular = "Anonimo";
+    }
+
 
     // con el dni, nombre y el saldo inicial.
-
-
+    public CuentaCorriente(String DNI, String titular, double saldo) {
+        this.DNI = DNI;
+        this.titular = titular;
+        this.saldo = saldo;
+    }
 
     //metodos de instancia -> los que se llamaran desde un objeto de tipo cuenta.
-    //Sacar dinero: el método debe indicar si ha sido posible llevar a cabo la operacion, si existe saldo suficiente.
+
+    /**
+     * Sacar dinero: el método debe indicar si ha sido posible llevar a cabo la operacion, si existe saldo suficiente.
+     * @param reintegro
+     */
     public  void sacarDinero(double reintegro){//reintegro = dinero a retirar
         if (saldo >= reintegro){
             //quitamos el dinero de la cuenta
