@@ -2,9 +2,31 @@ package ejercicios.cajero;
 
 public class CuentaCorriente {
     // que almacena los datos: DNI, NOMBRE DEL TITULAR, Y SALDO.
-    private String DNI;
-    private String titular;
+    String DNI;
+    public String titular;
     private double saldo;
+
+    //atributo statico
+    public static String nombreBanco;
+
+    public static String getNombreBanco() {
+        return nombreBanco;
+    }
+
+    public static void setNombreBanco(String nombreBanco) {
+        CuentaCorriente.nombreBanco = nombreBanco;
+    }
+
+    //objeto gestor asociado
+    private Gestor gestor;
+
+    public Gestor getGestor() {
+        return gestor;
+    }
+
+    public void setGestor(Gestor gestor) {
+        this.gestor = gestor;
+    }
 
     // constructor
     // crear una cuenta: se necesita el dni y nombre del titular, El saldo inicial sera a cero.
@@ -34,33 +56,43 @@ public class CuentaCorriente {
 
     /**
      * Sacar dinero: el método debe indicar si ha sido posible llevar a cabo la operacion, si existe saldo suficiente.
-     * @param reintegro
+     *
+     * @param cantidad
      */
-    public  void sacarDinero(double reintegro){//reintegro = dinero a retirar
-        if (saldo >= reintegro){
-            //quitamos el dinero de la cuenta
-            this.saldo = this.saldo - reintegro;// el nuevo saldo es el que teniamos menos el reintegro
-        }else{
-            System.out.println(" Saldo insuficiente ");
+    // Método para sacar dinero. Devuelve true si la operación es posible.
+    public boolean sacarDinero(double cantidad) {
+        if (saldo >= cantidad) {
+            saldo -= cantidad;
+            return true;
+        } else {
+            return false;
         }
     }
 
 
-
     /**
      * Ingresar dinero: se incrementa el saldo.
+     *
      * @param ingreso
      */
-    public  void ingresarDinero(double ingreso  ){
+    public void ingresarDinero(double ingreso) {
         this.saldo = this.saldo + ingreso;
     }
 
 
     /**
      * Mostrar informacion : muestra la informacion disponible de la cuenta corriente.
-     *
      */
-    public void mostrarInformacion(){
-        System.out.println(this.DNI + " - " + this.titular + " - saldo " + this.saldo + " €");
+    public void mostrarInformacion() {
+        System.out.println("DNI: " + DNI);
+        System.out.println("Titular: " + titular);
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Banco: " + nombreBanco);
+        if (gestor != null) {
+            System.out.println("Gestor: " + gestor);
+        } else {
+            System.out.println("Gestor: No asignado");
+        }
     }
 }
+
