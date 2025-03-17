@@ -1,10 +1,33 @@
 package ejercicios.cajero;
 
-public class CuentaCorriente {
+public class CuentaCorriente { // public -> visible para las demás clases
     // que almacena los datos: DNI, nombre del titular y saldo.
-    private String DNI;
-    private String titular;
-    private double saldo;
+    String DNI; // default package -> DNI sólo visible para clases del mismo paquete
+    public String titular; // public -> titular visible para las demás clases
+    private double saldo; // private -> saldo no es visible por las demás clases
+
+    // Todas las cuentas corrientes con las que se va a trabajar pertenecen al mismo banco. Añadir un atributo que almacena el nombre del banco (que es único) en la clase CuentaCorriente. Diseñar un método que permita recuperar y modificar el nombre del banco.
+    private String nombreBanco;
+
+    public String getNombreBanco() {
+        return nombreBanco;
+    }
+
+    public void setNombreBanco(String nombreBanco) {
+        this.nombreBanco = nombreBanco;
+    }
+
+    // Existen gestores que administran las cuentas bancarias y atienden a sus propietarios. Cada cuenta, en caso de tenerlo, cuenta con un único gestor.
+    // Modificar la clase CuentaCorriente para que pueda disponer de un objeto Gestor. Escribir los métodos necesarios para consultar qué gestor tiene una cuenta corriente y también para poder cambiarlo..
+    private Gestor gestor;
+
+    public Gestor getGestor() {
+        return gestor;
+    }
+
+    public void setGestor(Gestor gestor) {
+        this.gestor = gestor;
+    }
 
     // constructor --> crear una cuenta
     // Crear una cuenta: se necesita el DNI y nombre del titular. El saldo inicial será 0.
@@ -16,10 +39,22 @@ public class CuentaCorriente {
 
     // Sobrecarga los constructores para poder crear objetos:
     //Con el DNI del titular de la cuenta y un saldo inicial.
+    // Como no tenemos titular, le asignaremos el valor "Anónimo"
+
+    public CuentaCorriente(double saldo, String DNI) {
+        this.saldo = saldo;
+        this.DNI = DNI;
+        this.titular = "Anónimo";
+    }
+
 
     //Con el DNI, nombre y el saldo inicial.
 
-
+    public CuentaCorriente(String DNI, String titular, double saldo) {
+        this.DNI = DNI;
+        this.titular = titular;
+        this.saldo = saldo;
+    }
 
 
     // métodos de instancia -> los que se llamarán desde un objeto de tipo cuenta
