@@ -5,4 +5,13 @@ package ejercicios.variablesestaticas.contadorobjetos;
  */
 
 public class Persona {
+    private String nombre;
+    public static int contadorPersonas; // almacena el número de objetos que se crean de esta clase
+    public int contadorFull;
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+        contadorPersonas++; // cada vez que se crea un objeto se incrementa el contador de objetos
+        contadorFull++;
+    }
 }

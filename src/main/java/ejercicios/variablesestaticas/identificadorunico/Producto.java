@@ -5,4 +5,23 @@ package ejercicios.variablesestaticas.identificadorunico;
  */
 
 public class Producto {
+    private String nombre;
+    public static int contadorID;
+
+    // si tenemos un identificador único tenemos que ponerlo aquí y
+    private int idProducto;
+
+    public int getIdProducto() {
+        return idProducto;
+    }
+
+
+
+    public Producto(String nombre) {
+        this.nombre = nombre;
+        // cada vez que se crea un producto se incrementa contadorID
+        contadorID++; // esta es común para todos los objetos, no puede valer como identificador de un objeto
+        idProducto = contadorID; // asignamos el valor al id para este objeto
+
+    }
 }

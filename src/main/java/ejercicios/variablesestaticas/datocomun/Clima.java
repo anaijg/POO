@@ -5,4 +5,11 @@ package ejercicios.variablesestaticas.datocomun;
  */
 
 public class Clima {
+    public static double temperaturaGlobal; // común a todos los objetos de tipo Clima
+
+    // dejamos el constructor por defecto, que lo haga el compilador
+
+    public void actualizarTemperatura(double nuevaTemperatura) {
+        temperaturaGlobal = nuevaTemperatura;
+    }
 }
