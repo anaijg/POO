@@ -10,6 +10,14 @@ public class SubClaseD extends SubClaseA {
         this.atributoSubClaseD = atributoSubClaseD;
     }
 
+    public String getAtributoSubClaseD() {
+        return atributoSubClaseD;
+    }
+
+    public void setAtributoSubClaseD(String atributoSubClaseD) {
+        this.atributoSubClaseD = atributoSubClaseD;
+    }
+
     @Override
     public String toString() {
         return "SubClaseD{\n" +

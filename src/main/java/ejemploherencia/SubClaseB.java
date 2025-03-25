@@ -8,6 +8,14 @@ public class SubClaseB extends Superclase {
         this.atributoSubClaseB = atributoSubClaseB;
     }
 
+    public String getAtributoSubClaseB() {
+        return atributoSubClaseB;
+    }
+
+    public void setAtributoSubClaseB(String atributoSubClaseB) {
+        this.atributoSubClaseB = atributoSubClaseB;
+    }
+
     @Override
     public String toString() {
         return "SubClaseB{\n" +
