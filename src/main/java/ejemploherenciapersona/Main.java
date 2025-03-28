@@ -16,5 +16,6 @@ public class Main {
         programador.setSalario(500000);
 
         System.out.println(programador.getNombre() + " " + programador.getDireccion() + Arrays.toString(programador.getLenguajesDeProgramacion()));
+
     }
 }
