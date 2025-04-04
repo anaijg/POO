@@ -1,6 +1,5 @@
 package ejerciciosherencia.empresa.modelo;
 
-
 import java.time.LocalDate;
 
 public class Empleado extends Persona {
@@ -8,7 +7,8 @@ public class Empleado extends Persona {
 
     public Empleado(
             String nombre,
-            LocalDate fechaDeNacimiento, double sueldoBruto
+            LocalDate fechaDeNacimiento,
+            double sueldoBruto
     ) {
         super(nombre, fechaDeNacimiento);
         // comprobamos que el sueldo es ok

@@ -3,7 +3,7 @@ package ejerciciosherencia.empresa.modelo;
 import java.time.LocalDate;
 
 public class Cliente extends Persona{
-    private String telefonoDeContacto = "0123456a8";
+    private String telefonoDeContacto;
     //
     public Cliente(
             String nombre,
@@ -14,21 +14,20 @@ public class Cliente extends Persona{
         // cualquier cosa que no sea un número, lo reemplazamos por nada (o sea, lo quitamos)
         // pero antes inicializo el atributo
         //this.telefonoDeContacto = "888888888";
-        for (int i = 0; i < telefonoDeContacto.length(); i++) {
-            Character carácter = telefonoDeContacto.charAt(i);
-            System.out.println(carácter);
-            if (!Character.isDigit(carácter)) {
-                // en este momento el atributo
-                telefonoDeContacto.replaceAll("[^0-9]", "");
-            }
-        }
-        // ahora que sólo tengo dígitos en el teléfono, compruebo que sean 9 cifras
-        if (telefonoDeContacto.length() == 9) {
-            this.telefonoDeContacto = telefonoDeContacto;
-        } else {
-            this.telefonoDeContacto = "Desconocido";
-        }
+       if(telefonoDeContacto.matches("\\d{9}")) {
+           this.telefonoDeContacto = telefonoDeContacto;
+       } else {
+           this.telefonoDeContacto = "Desconocido";
+       }
+    }
 
+    // si el cliente no tiene teléfono lo creamos solo con nombre y fecha
+
+
+    public Cliente(String nombre, LocalDate fechaDeNacimiento) {
+        super(nombre, fechaDeNacimiento);
+        // si no hay teléfono,
+        this.telefonoDeContacto = "Desconocido";
     }
 
     @Override

@@ -13,9 +13,11 @@ public class Main {
         double sueldoNeto = empleado.calcularSalarioNeto();
         System.out.println(empleado.getNombre() + " - sueldo neto = " + sueldoNeto + " €");
 
-        Cliente cliente = new Cliente("Pura", LocalDate.of(2005, 8, 8), "6666666a2");
-        cliente.mostrar();
+        Cliente cliente1 = new Cliente("Pura", LocalDate.of(2005, 8, 8), "666666729");
+        cliente1.mostrar();
 
-        //System.out.println("   666-66-66  ".trim().replace(" ", ""));
+        // probamos el segundo constructor de Cliente, sin teléfono
+        Cliente cliente2 = new Cliente("Juan", LocalDate.of(1998, 5, 26));
+        cliente2.mostrar();
     }
 }
