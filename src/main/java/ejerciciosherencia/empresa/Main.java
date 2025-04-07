@@ -1,9 +1,10 @@
 package ejerciciosherencia.empresa;
 
-import ejerciciosherencia.empresa.modelo.Cliente;
-import ejerciciosherencia.empresa.modelo.Empleado;
+import ejerciciosherencia.empresa.modelo.*;
+
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,5 +20,25 @@ public class Main {
         // probamos el segundo constructor de Cliente, sin teléfono
         Cliente cliente2 = new Cliente("Juan", LocalDate.of(1998, 5, 26));
         cliente2.mostrar();
+
+        // probamos a crear un Directivo
+        Directivo directivo = new Directivo("Jefazo", LocalDate.of(1979, 06, 13), 150000, Categoria.CEO);
+        directivo.mostrar();
+        directivo.asignarPlus();
+        directivo.mostrar();
+        System.out.println(directivo.calcularSalarioNeto());
+
+        // creamos una empresa
+        Empresa empresa = new Empresa("Cocoliso S.A");
+        empresa.mostrar();
+
+        ArrayList<Empleado> empleados = new ArrayList<>();
+        empleados.add(empleado);
+        empleados.add(directivo); // polimorfismo en acción: un directivo es un empleado
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        clientes.add(cliente1);
+        clientes.add(cliente2);
+        Empresa empresa1 = new Empresa("Tutifrutii S.L", empleados, clientes);
+        empresa1.mostrar();
     }
 }

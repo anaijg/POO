@@ -3,7 +3,7 @@ package ejerciciosherencia.empresa.modelo;
 import java.time.LocalDate;
 
 public class Empleado extends Persona {
-    private double sueldoBruto;
+    protected double sueldoBruto;
 
     public Empleado(
             String nombre,
@@ -30,5 +30,10 @@ public class Empleado extends Persona {
         return sueldoBruto;
     }
 
-
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "nombre='" + nombre + '\'' +
+                '}';
+    }
 }

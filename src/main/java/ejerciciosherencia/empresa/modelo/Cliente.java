@@ -35,4 +35,11 @@ public class Cliente extends Persona{
         super.mostrar();
         System.out.println("    teléfono: " + this.telefonoDeContacto);
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nombre='" + nombre + '\'' +
+                '}';
+    }
 }

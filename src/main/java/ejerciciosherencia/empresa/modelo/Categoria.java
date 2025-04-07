@@ -1,5 +1,5 @@
 package ejerciciosherencia.empresa.modelo;
 
-public enum TipoDirectivo {
+public enum Categoria {
     CEO, CTO, CSO, CFO
 }
