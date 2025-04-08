@@ -10,5 +10,7 @@ public class Main {
         Pincel pincel = new Pincel(5, "rgb(0,255,0)");
         pincel.dibujarLibre();
 
+
+
     }
 }
